@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ipoh 最新楼盘资讯 | 房产专家 Mahmahyue</title>
+    <style>
+        /* CSS 部分保持不变，确保美观 */
+        body { font-family: 'Arial', sans-serif; margin: 0; background: #f4f4f4; color: #333; }
+        .navbar { background: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
+        .logo { font-weight: bold; font-size: 1.2rem; color: #2c3e50; }
+        .wa-btn-nav { background: #25d366; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; }
+        .hero { background: #2c3e50; height: 180px; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; }
+        .projects { padding: 10px;
+    display: grid;
+    /* 核心修改：让它在宽屏上平均分成 3 份 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 400px; /* 让内容居中，不至于拉得太宽 */
+    margin: 0 auto; }
+        .card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .img-container { height: 220px; background-size: cover; background-position: center; filter: brightness(1.1) contrast(1.05); }
+        .info { padding: 20px; }
+        .info h3 { margin: 0 0 10px 0; color: #2c3e50; }
+        .info p { color: #666; font-size: 0.9rem; line-height: 1.6; }
+        .info button { width: 100%; padding: 12px; background: #25d366; border: none; color: #fff; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 1rem; margin-top: 10px; }
+        .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 2px 5px 15px rgba(0,0,0,0.2); z-index: 999; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">怡保房产资讯</div>
+        <a href="javascript:void(0);" onclick="contactWA('网站导航')" class="wa-btn-nav">咨询详情</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>怡保精选新楼盘</h1>
+            <p>Ipoh 最具潜力的房产项目</p>
+        </div>
+    </header>
+
+    <section class="projects">
+        <!-- 找到这一行并进行修改 -->
+<div class="card">
+    <!-- 修改这里的 url 路径 -->
+    <div class="img-container" style="background-image: url('images/taman mutiara/facade.png');"></div>
+    <div class="info">
+        <h3>Ipoh South 精选双层排屋</h3>
+        <p>📍 Ipoh,Botani <br>
+           💰 售价从 RM 4xx,xxx 起<br>
+           ✅ 4 房 3 厕 | 环境优美 | 交通便利</p>
+        <button onclick="contactWA('怡保双层排屋项目')">WhatsApp 了解详情</button>
+    </div>
+</div>
+
+    </section>
+
+    <a href="javascript:void(0);" onclick="contactWA('悬浮按钮')" class="float-wa">
+        💬 WhatsApp 咨询
+    </a>
+
+    <script>
+        /* === 核心修复逻辑 === */
+        function contactWA(projectName) {
+            // 你的号码 60125889622
+            const phone = "60125889622"; 
+            const text = "你好 Mahmahyue，我对你在网站上发布的【" + projectName + "】很感兴趣，想了解更多详情。";
+            
+            // 注意这里：https://wa.me 后面一定要带斜杠
+            const waUrl = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
+            
+            // 执行跳转
+            window.location.href = waUrl;
+        }
+    </script>
+
+</body>
+</html>
+
